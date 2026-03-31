@@ -10,9 +10,16 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>JavaWebApp</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>JavaWebApp</name>
 	<description>JavaWebApp project for Spring Boot</description>
+	<properties>
+        <!-- versions -->
+        <sonar.host.url>http://3.80.142.78:9000/</sonar.host.url>
+        <sonar.login>squ_a581b7edb6897e70e1908026fb1dab32772053d7</sonar.login>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        </properties>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -54,11 +61,13 @@
 	<distributionManagement>
     <snapshotRepository>
       <id>nexusdeploymentrepo</id>
-      <url>http://3.82.109.108:8081/repository/maven-snapshots/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
-    </snapshotRepository>											  <!-- Mmake sure to create the "maven-snapshots" repo in Nexus -->
+	  <name>mvn-sonar-nexus-tom-jenkins-project-2-main-fre-Snapshot Nexus Repository</name>
+      <url>http://98.92.142.55:8081/repository/mvn-sonar-nexus-tom-jenkins-project-2-main-fre-Snapshot/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
+    </snapshotRepository>											                      <!-- Mmake sure to create the "maven-snapshots" repo in Nexus -->
 	<repository>
 	  <id>nexusdeploymentrepo</id>
-      <url>http://3.82.109.108:8081/repository/maven-releases/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
+	  <name>mvn-sonar-nexus-tom-jenkins-project-2-main-fre-Release Nexus Repository</name>
+      <url>http://98.92.142.55:8081/repository/mvn-sonar-nexus-tom-jenkins-project-2-main-fre-Release/</url> <!-- Update the IP/Address to Your Nexus VM IP -->
     </repository>													 <!-- Also make sure you have the above two or one repositories created -->
   
   </distributionManagement>
